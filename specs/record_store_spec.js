@@ -13,7 +13,7 @@ describe('RecordStore Test', function(){
   beforeEach(function(){
     record1 = new Record("The Cure", "Friday, I'm in Love", "pop", 10)
     record2 = new Record("Ash", "Kung Fu", "pop", 8)
-    record3 = new Record("Prince", "Purple Rain", "pop", 10)
+    record3 = new Record("Prince", "Purple Rain", "rock", 10)
     recordStore1 = new RecordStore("Vinyl Attack", "Perth")
   });
 
@@ -45,6 +45,13 @@ describe('RecordStore Test', function(){
     recordStore1.addRecord(record2);
     assert.equal(28, recordStore1.totalValue());
   });
+
+  // it('should find all records of a given genre', function(){
+  //   recordStore1.addRecord(record3);
+  //   recordStore1.addRecord(record1);
+  //   recordStore1.addRecord(record2);
+  //   assert.strictEqual([{artist: Prince genre: rock price: 10 title: Purple Rain }], recordStore1.filteredInventory("rock"));
+  // });
 
   
 
