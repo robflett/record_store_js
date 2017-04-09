@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 var RecordStore = function(name, city) {
   this.name = name;
   this.city = city;
@@ -21,6 +23,20 @@ RecordStore.prototype = {
  sellRecord: function(record){
     this.balance += record.price
    this.inventory.splice(record)
+ },
+
+ totalValue: function(genre){
+   return _.reduce(this.filteredInventory(genre), function(sum, item){
+     // console.log(sum);
+     return sum + item.price;
+   },0);
+ },
+
+ filteredInventory: function(genre){
+   if(!genre) return this.inventory;
+   return _.filter(this.inventory, function(record){
+     return record.genre === genre;
+   })
  },
 
 }

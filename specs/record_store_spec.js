@@ -37,7 +37,14 @@ describe('RecordStore Test', function(){
     recordStore1.sellRecord(record2)
     assert.strictEqual(8, recordStore1.balance)
     assert.strictEqual(0, recordStore1.inventory.length)
-  })
+  });
+
+  it('should find the total inventory value', function() {
+    recordStore1.addRecord(record3);
+    recordStore1.addRecord(record1);
+    recordStore1.addRecord(record2);
+    assert.equal(28, recordStore1.totalValue());
+  });
 
   
 
