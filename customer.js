@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 var Customer = function(name, cash){
   this.name = name;
   this.cash = cash;
@@ -20,6 +22,21 @@ Customer.prototype = {
  sellRecord: function(record){
     this.cash += record.price
    this.collection.splice(record)
+ },
+
+
+ totalValue: function(genre){
+   return _.reduce(this.filteredCollection(genre), function(sum, item){
+     // console.log(sum);
+     return sum + item.price;
+   },0);
+ },
+
+ filteredCollection: function(genre){
+   if(!genre) return this.collection;
+   return _.filter(this.collection, function(record){
+     return record.genre === genre;
+   })
  },
 
 }
