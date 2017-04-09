@@ -18,6 +18,11 @@ RecordStore.prototype = {
     return properties
  },
 
+ sellRecord: function(record){
+    this.balance += record.price
+   this.inventory.splice(record)
+ },
+
 }
 
 module.exports = RecordStore;

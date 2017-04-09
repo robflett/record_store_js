@@ -32,7 +32,12 @@ describe('RecordStore Test', function(){
     assert.deepEqual(["Artist: The Cure, Title: Friday, I'm in Love, Genre: pop, Price: 10"], recordStore1.printProperties())
   });
 
-  
+  it('should be able to sell a record', function(){
+    recordStore1.addRecord(record2)
+    recordStore1.sellRecord(record2)
+    assert.strictEqual(8, recordStore1.balance)
+    assert.strictEqual(0, recordStore1.inventory.length)
+  })
 
   
 
