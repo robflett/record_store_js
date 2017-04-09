@@ -3,14 +3,14 @@ var Record = function(artist, title, genre, price){
   this.title = title;
   this.genre = genre;
   this.price = price;
-}
+};
 
 Record.prototype = {
 
- // printProperties: function(){
- //   console.log("Artist: ", this.artist, ", Title: ", this.title, ", Genre: ", this.genre, ", Price: ", this.price);
+ printRecord: function(){
+   return "Artist: " + this.artist + ", Title: " + this.title + ", Genre: " + this.genre + ", Price: " + this.price;
 
- // },
+ },
 
 }
 

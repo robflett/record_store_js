@@ -15,7 +15,11 @@ describe('Record Test', function(){
     record2 = new Record("Ash", "Kung Fu", "pop", 8)
     record3 = new Record("Prince", "Purple Rain", "pop", 10)
     recordStore1 = new RecordStore("Vinyl Attack", "Perth")
-    })
+    });
+
+  it('should print out a records details', function(){
+    assert.deepEqual("Artist: Ash, Title: Kung Fu, Genre: pop, Price: 8", record2.printRecord())
+  })
 
   
 
