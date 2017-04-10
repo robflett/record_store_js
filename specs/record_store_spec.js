@@ -46,12 +46,15 @@ describe('RecordStore Test', function(){
     assert.equal(28, recordStore1.totalValue());
   });
 
-  // it('should find all records of a given genre', function(){
-  //   recordStore1.addRecord(record3);
-  //   recordStore1.addRecord(record1);
-  //   recordStore1.addRecord(record2);
-  //   assert.strictEqual([{artist: Prince genre: rock price: 10 title: Purple Rain }], recordStore1.filteredInventory("rock"));
-  // });
+  it('should find all records of a given genre', function(){
+    recordStore1.addRecord(record3);
+    recordStore1.addRecord(record1);
+    recordStore1.addRecord(record2);
+    assert.deepEqual([ { artist: 'Prince',
+    title: 'Purple Rain',
+    genre: 'rock',
+    price: 10 } ], recordStore1.filteredInventory("rock"));
+  });
 
   
 
