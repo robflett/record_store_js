@@ -48,4 +48,21 @@ it('should find the total collection value', function() {
 //   assert.equal(12, customer1.sortByValue());
 // });
 
+// it('should sort by value', function() {
+//   customer1.buyRecord(record3);
+//   customer1.buyRecord(record1);
+//   customer1.buyRecord(record2);
+//   customer2.buyRecord(record1);
+//   customer2.buyRecord(record2);
+//   assert.equal(12, customer1.sortByValue());
+// });
+
+// it('should comapre collections', function() {
+//   customer1.buyRecord(record3);
+//   customer1.buyRecord(record1);
+//   customer1.buyRecord(record2);
+//   customer2.buyRecord(record1);
+//   customer2.buyRecord(record2);
+//   assert.equal(12, customer1.compareCollections(customer2));
+// });
 });

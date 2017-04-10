@@ -49,6 +49,15 @@ Customer.prototype = {
   this.collection.sort(function(a, b) {
       return parseFloat(a.price) - parseFloat(b.price);
   });
+ },
+
+ compareCollections: function(customerToCompare){
+  if customer1.totalValue() < customer2.totalValue() {
+    return console.log(customer2 + "has the most valuable collection")
+    else
+      return console.log(customer1 + "has the most valuable collection")
+  }
+
  }
 
 }
