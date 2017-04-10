@@ -18,7 +18,7 @@ describe('Customer Test', function(){
     customer2 = new Customer("Meg", 4)
     record1 = new Record("The Cure", "Friday, I'm in Love", "pop", 10)
     record2 = new Record("Ash", "Kung Fu", "pop", 8)
-    record3 = new Record("Prince", "Purple Rain", "rock", 10)
+    record3 = new Record("Prince", "Purple Rain", "rock", 11)
     recordStore1 = new RecordStore("Vinyl Attack", "Perth")
   });
 
@@ -31,7 +31,21 @@ it('should find the total collection value', function() {
   customer1.buyRecord(record3);
   customer1.buyRecord(record1);
   customer1.buyRecord(record2);
-  assert.equal(28, customer1.totalValue());
+  assert.equal(29, customer1.totalValue());
 });
+
+// it('should find the most valuable record', function() {
+//   customer1.buyRecord(record3);
+//   customer1.buyRecord(record1);
+//   customer1.buyRecord(record2);
+//   assert.equal(12, customer1.findMostValuable());
+// });
+
+// it('should sort by value', function() {
+//   customer1.buyRecord(record3);
+//   customer1.buyRecord(record1);
+//   customer1.buyRecord(record2);
+//   assert.equal(12, customer1.sortByValue());
+// });
 
 });

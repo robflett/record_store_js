@@ -39,6 +39,18 @@ Customer.prototype = {
    })
  },
 
+ findMostValuable: function(){
+  var maxValue = _.max(this.collection, function (obj) {
+    return obj.price;
+  });
+ },
+
+ sortByValue: function(){
+  this.collection.sort(function(a, b) {
+      return parseFloat(a.price) - parseFloat(b.price);
+  });
+ }
+
 }
 
 module.exports = Customer;
