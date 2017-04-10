@@ -34,12 +34,12 @@ it('should find the total collection value', function() {
   assert.equal(29, customer1.totalValue());
 });
 
-// it('should find the most valuable record', function() {
-//   customer1.buyRecord(record3);
-//   customer1.buyRecord(record1);
-//   customer1.buyRecord(record2);
-//   assert.equal(12, customer1.findMostValuable());
-// });
+it('should find the most valuable record', function() {
+  customer1.buyRecord(record3);
+  customer1.buyRecord(record1);
+  customer1.buyRecord(record2);
+  assert.equal(11, customer1.findMostValuable());
+});
 
 // it('should sort by value', function() {
 //   customer1.buyRecord(record3);
@@ -57,12 +57,12 @@ it('should find the total collection value', function() {
 //   assert.equal(12, customer1.sortByValue());
 // });
 
-// it('should comapre collections', function() {
-//   customer1.buyRecord(record3);
-//   customer1.buyRecord(record1);
-//   customer1.buyRecord(record2);
-//   customer2.buyRecord(record1);
-//   customer2.buyRecord(record2);
-//   assert.equal(12, customer1.compareCollections(customer2));
-// });
+it('should compare collections', function() {
+  customer1.buyRecord(record3);
+  customer1.buyRecord(record1);
+  customer1.buyRecord(record2);
+  customer2.buyRecord(record1);
+  customer2.buyRecord(record2);
+  assert.equal("Jeff has the most valuable collection", customer1.compareCollections(customer2));
+});
 });

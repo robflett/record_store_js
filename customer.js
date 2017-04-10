@@ -40,9 +40,11 @@ Customer.prototype = {
  },
 
  findMostValuable: function(){
-  var maxValue = _.max(this.collection, function (obj) {
+  var mostValuableRecord = _.max(this.collection, function (obj) {
     return obj.price;
   });
+  // console.log(maxVa)
+  return mostValuableRecord.price
  },
 
  sortByValue: function(){
@@ -52,11 +54,12 @@ Customer.prototype = {
  },
 
  compareCollections: function(customerToCompare){
-  if customer1.totalValue() < customer2.totalValue() {
-    return console.log(customer2 + "has the most valuable collection")
-    else
-      return console.log(customer1 + "has the most valuable collection")
-  }
+  if (this.totalValue() < customerToCompare.totalValue()) {
+    return customerToCompare.name + " has the most valuable collection"}
+    else {
+      return this.name + " has the most valuable collection"
+    }
+  
 
  }
 
