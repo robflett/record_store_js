@@ -43,14 +43,15 @@ Customer.prototype = {
   var mostValuableRecord = _.max(this.collection, function (obj) {
     return obj.price;
   });
-  // console.log(maxVa)
+  
   return mostValuableRecord.price
  },
 
  sortByValue: function(){
-  this.collection.sort(function(a, b) {
-      return parseFloat(a.price) - parseFloat(b.price);
+  var returnValue = this.collection.sort(function(a, b) {
+       parseFloat(a.price) - parseFloat(b.price);
   });
+  return  returnValue.toString()
  },
 
  compareCollections: function(customerToCompare){

@@ -41,12 +41,16 @@ it('should find the most valuable record', function() {
   assert.equal(11, customer1.findMostValuable());
 });
 
-// it('should sort by value', function() {
-//   customer1.buyRecord(record3);
-//   customer1.buyRecord(record1);
-//   customer1.buyRecord(record2);
-//   assert.equal(12, customer1.sortByValue());
-// });
+it('should sort by value', function() {
+  customer1.buyRecord(record3);
+  // customer1.buyRecord(record1);
+  customer1.buyRecord(record2);
+  assert.equal([ { artist: 'Prince',
+    title: 'Purple Rain',
+    genre: 'rock',
+    price: 11 },
+  { artist: 'Ash', title: 'Kung Fu', genre:  'pop', price: 8 }], customer1.sortByValue());
+});
 
 // it('should sort by value', function() {
 //   customer1.buyRecord(record3);
